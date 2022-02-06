@@ -1,0 +1,37 @@
+{
+  "name": "lp",
+  "version": "1.0.0",
+  "description": "training lp",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bstolarski/lp.git"
+  },
+  "author": "bstolarski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bstolarski/lp/issues"
+  },
+  "homepage": "https://github.com/bstolarski/lp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^5.0.0",
+    "postcss": "^8.4.6",
+    "sass": "^1.49.7"
+  },
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp-cssnano": "^2.1.3"
+  }
+}
