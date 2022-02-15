@@ -9,7 +9,6 @@ const postcss = require("gulp-postcss")
 const sass = require("gulp-sass")(require("sass"))
 const autoprefixer = require("autoprefixer")
 const cssnano = require("cssnano")
-const fileinclude = require("gulp-file-include")
 
 const config = {
   app: {
@@ -90,28 +89,16 @@ function cleanUp() {
   return del([config.dist.base])
 }
 
-function includeHTML() {
-  src(config.app.html)
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "@file",
-      })
-    )
-    .pipe(dest(config.dist.base))
-}
-
-exports.default = parallel(
+exports.dev = parallel(
   jsTask,
   cssTask,
   fontTask,
   imagesTask,
   templateTask,
   watchFiles,
-  liveReload,
-  includeHTML
+  liveReload
 )
 exports.build = series(
   cleanUp,
-  parallel(jsTask, cssTask, fontTask, imagesTask, templateTask, includeHTML)
+  parallel(jsTask, cssTask, fontTask, imagesTask, templateTask)
 )
