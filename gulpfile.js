@@ -13,7 +13,7 @@ const fileinclude = require("gulp-file-include")
 
 const config = {
   app: {
-    js: ["./app/scripts/**/*.js"],
+    js: ["./app/js/**/*.js"],
     scss: "./app/scss/**/*.scss",
     fonts: "./app/fonts/*",
     images: "./app/images/*.*",
@@ -107,9 +107,9 @@ exports.default = parallel(
   fontTask,
   imagesTask,
   templateTask,
+  includeHTML,
   watchFiles,
-  liveReload,
-  includeHTML
+  liveReload
 )
 exports.build = series(
   cleanUp,
