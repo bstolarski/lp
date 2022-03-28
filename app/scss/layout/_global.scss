@@ -9,6 +9,12 @@
   margin-left: auto;
 }
 
+h2 {
+  font-family: "obi-bold", "Helvetica", "Arial", sans-serif;
+  text-align: center;
+  font-size: 36px;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
